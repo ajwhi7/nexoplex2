@@ -6,7 +6,6 @@
           </div>
           <nav>
             <ul class="nav pull-right">
-              <li><%= link_to "Sign in",    '#' %></li>
               <li><%= link_to "Home",    root_path %></li>
               <li><%= link_to "Search", '#' %></li>
               <% if signed_in? %>
@@ -27,6 +26,7 @@
               <% else %>
                 <li><%= link_to "Sign in", signin_path %></li>
               <% end %>
+              <li><%= link_to "Create",    'create' %></li>
             </ul>
           </nav>
         </div>
