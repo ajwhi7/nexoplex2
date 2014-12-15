@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141202065124) do
+ActiveRecord::Schema.define(version: 20141210225946) do
+
+  create_table "nodes", force: true do |t|
+    t.string   "title"
+    t.string   "what"
+    t.string   "when"
+    t.string   "how"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "nodes", ["title"], name: "index_nodes_on_title", unique: true
 
   create_table "users", force: true do |t|
     t.string   "name"

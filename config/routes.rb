@@ -1,6 +1,7 @@
 Nexoplex::Application.routes.draw do
-  get "nodes/new"
+
   resources :users
+  resources :nodes
   resources :sessions, only: [:new, :create, :destroy]
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
