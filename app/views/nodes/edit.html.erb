@@ -1,0 +1,20 @@
+<% provide(:title, "Edit user") %>
+<h1>Refine this Node</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@node) do |f| %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :what %>
+      <%= f.text_field :what %>
+
+      <%= f.label :when %>
+      <%= f.text_field :when %>
+
+      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
